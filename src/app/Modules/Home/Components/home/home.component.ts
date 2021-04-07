@@ -10,7 +10,7 @@ import { ApiCallService  } from "@app/Services/api-call.service";
 })
 export class HomeComponent implements OnInit {
 
-  view: string = 'List';
+  view: string = 'Card';
   array: any = ['FDB - 026', 'FDB - 025', 'FDB - 024'];
   selectedIndex: number = 0;
 

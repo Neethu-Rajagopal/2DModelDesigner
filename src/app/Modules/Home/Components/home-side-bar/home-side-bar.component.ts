@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home-side-bar.component.scss']
 })
 export class HomeSideBarComponent implements OnInit {
+  selectedHomeTab: string = 'Electrical Engineering';
 
   constructor() { }
 

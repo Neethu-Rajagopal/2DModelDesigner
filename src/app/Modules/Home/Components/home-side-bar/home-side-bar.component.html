@@ -1,12 +1,16 @@
 <div id="sidebar-wrapper">
-  <div class="heading"> Digital Twin Types </div>
-  <ul class="sidebar-nav">
-      <li> <a>
-              <img src="./assets/images/ic_developer_board_24px.svg" />
-              Electrical Engineering </a> </li>
-      <li class="active"> <a>
-              <img src="./assets/images/Petroleum-refining.svg" />
-              Industrial Engineering</a> </li>
-      <li> <a>Network</a> </li>
-  </ul>
+        <div class="heading"> Digital Twin Types </div>
+        <ul class="sidebar-nav">
+                <li (click)="selectedHomeTab = 'Electrical Engineering'"
+                        [ngClass]="{'active' : selectedHomeTab === 'Electrical Engineering'}">
+                        <a> <img src="./assets/images/ic_developer_board.svg" />
+                                Electrical Engineering </a>
+                </li>
+                <li (click)="selectedHomeTab = 'Industrial Engineering'"
+                        [ngClass]="{'active' : selectedHomeTab === 'Industrial Engineering'}">
+                        <a> <img src="./assets/images/Petroleum-refining.svg" />
+                                Industrial Engineering</a>
+                </li>
+                <li> <a>Network</a> </li>
+        </ul>
 </div>
