@@ -1,0 +1,43 @@
+ul.sidebar-nav {
+    li {
+        border-bottom: 1px solid #ebebeb;
+        padding: 9.5px 0;
+        .text {
+            color: #808080;
+            font-size: 12px;
+        }
+        small {
+            font-size: 10px;
+            color: #808080;
+        }
+        input {
+            border: 1px solid #d6d6d6;
+            background: #fff;
+            border-radius: 2px;
+            width: 181px;
+        }
+        .icon-grp {
+            img {
+                margin-right: 16px;
+                &:nth-child(5) {
+                    margin: 0;
+                }
+            }
+        }
+        .item {
+            display: flex;
+            margin-bottom: 20px;
+            .color {
+                border: 1px solid #d6d6d6;
+                width: 24px;
+                height: 12px;
+                border-radius: 2px;
+                background: #fff;
+                margin-right: 8px;
+                &.border {
+                    background: #808080;
+                }
+            }
+        }
+    }
+}

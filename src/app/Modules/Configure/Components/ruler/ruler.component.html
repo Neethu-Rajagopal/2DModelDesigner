@@ -1,0 +1,6 @@
+<div class="ruler" [ngClass]="alignment === 'horizontal' ? 'horizontal' :'vertical'">
+    <div class="ruler-cell" *ngFor="let item of [].constructor(16); index as i;">
+        <div class="mid-line"></div>
+        <span class="text">{{i * 10}}</span>
+    </div>
+</div>

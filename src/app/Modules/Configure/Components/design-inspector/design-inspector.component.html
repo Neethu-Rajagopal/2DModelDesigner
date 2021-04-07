@@ -1,0 +1,78 @@
+<div id="sidebar-wrapper" class="design">
+    <div class="d-flex">
+        <div class="heading"> Inspector </div>
+        <ul class="nav nav-tabs mb-1">
+            <li class="nav-item" (click)="inspectorTab = 'Design';">
+                <a class="nav-link" [ngClass]="{'active':inspectorTab === 'Design'}">Design</a>
+            </li>
+            <li class="nav-item" (click)="inspectorTab = 'Properties';">
+                <a class="nav-link" [ngClass]="{'active':inspectorTab === 'Properties'}">Properties</a>
+            </li>
+        </ul>
+    </div>
+    <ng-container *ngIf="inspectorTab === 'Design'; else propertiesTab;">
+        <div class="sub-text">Box Widget</div>
+        <ul class="sidebar-nav p-0">
+            <li>
+                <div class="text d-inline-block" style="margin-right: 11px;">Name</div>
+                <input type="text" />
+            </li>
+            <li>
+                <div class="text">Actions</div>
+                <div class="icon-grp">
+                    <img width="14px" height="14px" src="../../../../assets/images/ic_content_cut_24px.svg" />
+                    <img width="14px" height="16px" src="../../../../assets/images/ic_content_copy_24px.svg" />
+                    <img width="13px" height="15px" src="../../../../assets/images/ic_content_paste_24px.svg" />
+                    <img width="14px" height="16px" src="../../../../assets/images/Group-4109.svg" />
+
+                    <img class="float-right" width="12px" height="15px"
+                        src="../../../../assets/images/ic_delete_forever_24px.svg" />
+                </div>
+            </li>
+            <li>
+                <div class="text">Transform</div>
+                <input type="text" />
+            </li>
+            <li>
+                <div class="text">Opacity</div>
+                <div>
+                    <small>100%</small>
+                </div>
+            </li>
+            <li>
+                <div class="text mb-2">Color</div>
+                <div class="item">
+                    <label class="container check-box">
+                        <input type="checkbox" checked="checked">
+                        <span class="checkmark"></span>
+                    </label>
+                    <div class="color"></div>
+                    <small>Fill</small>
+                </div>
+                <div class="item">
+                    <label class="container check-box">
+                        <input type="checkbox" checked="checked">
+                        <span class="checkmark"></span>
+                    </label>
+                    <div class="color border"></div>
+                    <small>Border</small>
+                </div>
+            </li>
+            <li>
+                <div class="text">Stack Order</div>
+                <input type="text" />
+            </li>
+            <li>
+                <div class="text">Group</div>
+                <input type="text" />
+            </li>
+            <li>
+                <div class="text">Advanced</div>
+                <input type="text" />
+            </li>
+        </ul>
+    </ng-container>
+    <ng-template #propertiesTab>
+
+    </ng-template>
+</div>

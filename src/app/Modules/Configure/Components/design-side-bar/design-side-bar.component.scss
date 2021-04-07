@@ -1,0 +1,34 @@
+#sidebar-wrapper {
+    .search {
+        margin-top: 7px;
+        width: 230px;
+        input {
+            width: 230px;
+        }
+    }
+    select {
+        background: #d6d6d6;
+        border: 1px solid #d6d6d6;
+        width: 230px;
+        height: 26px;
+        font-size: 14px;
+        color: #000000cc;
+        font-weight: 600;
+    }
+    li {
+        list-style: none;
+        .wrapper {
+            margin: 14px 0 12px;
+            width: 230px;
+            .item {
+                margin-bottom: 20px;
+                width: 33.33%;
+                .text {
+                    margin-top: 6px;
+                    font-size: 10px;
+                    color: #000000cc;
+                }
+            }
+        }
+    }
+}

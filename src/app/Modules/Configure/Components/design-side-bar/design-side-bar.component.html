@@ -1,0 +1,114 @@
+<div id="sidebar-wrapper" class="design">
+    <div class="d-flex">
+        <div class="heading"> Library </div>
+        <ul class="nav nav-tabs">
+            <li class="nav-item" (click)="selectedSubTab = 'System';">
+                <a class="nav-link" [ngClass]="{'active':selectedSubTab === 'System'}">System</a>
+            </li>
+            <li class="nav-item" (click)="selectedSubTab = 'Custom';">
+                <a class="nav-link" [ngClass]="{'active':selectedSubTab === 'Custom'}">Custom</a>
+            </li>
+        </ul>
+    </div>
+    <div class="search">
+        <input type="text" placeholder="Search Widgets" />
+        <span class="icon-search"></span>
+    </div>
+    <ul class="sidebar-nav">
+        <li>
+            <select>
+                <option>Shapes</option>
+            </select>
+            <div class="wrapper d-flex flex-wrap">
+                <div class="item d-flex flex-column align-items-center" *ngFor="let i of [].constructor(6);">
+                    <span class="image">
+                        <img width="75px" height="40px" src="./assets/images/Screenshot.png" />
+                    </span>
+                    <span class="text">Box</span>
+                </div>
+            </div>
+        </li>
+        <li>
+            <select>
+                <option>Text / Datetime</option>
+            </select>
+            <div class="wrapper d-flex flex-wrap">
+                <div class="item d-flex flex-column align-items-center" *ngFor="let i of [].constructor(6);">
+                    <span class="image">
+                        <img width="75px" height="40px" src="./assets/images/Screenshot.png" />
+                    </span>
+                    <span class="text">Box</span>
+                </div>
+            </div>
+        </li>
+        <li>
+            <select>
+                <option>Images</option>
+            </select>
+            <div class="wrapper d-flex flex-wrap">
+                <div class="item d-flex flex-column align-items-center">
+                    <span class="image">
+                        <img width="42px" height="42px" src="./assets/images/ic_collections_24px.svg" />
+                    </span>
+                    <span class="text">Pictures</span>
+                </div>
+                <div class="item d-flex flex-column align-items-center">
+                    <span class="image">
+                        <img width="40px" height="46px" src="./assets/images/ic_filter_vintage_24px.svg" />
+                    </span>
+                    <span class="text">Icon</span>
+                </div>
+            </div>
+        </li>
+        <li>
+            <select>
+                <option>Charts</option>
+            </select>
+            <div class="wrapper d-flex flex-wrap">
+                <div class="item d-flex flex-column align-items-center">
+                    <span class="image">
+                        <img width="75px" height="75px" src="./assets/images/Screenshot-1.png" />
+                    </span>
+                    <span class="text">Bar Chart</span>
+                </div>
+                <div class="item d-flex flex-column align-items-center">
+                    <span class="image">
+                        <img width="75px" height="75px" src="./assets/images/Screenshot-2.png" />
+                    </span>
+                    <span class="text">Column Chart</span>
+                </div>
+            </div>
+        </li>
+        <li>
+            <select>
+                <option>Industrial</option>
+            </select>
+            <div class="wrapper d-flex flex-wrap">
+                <div class="item w25 d-flex flex-column align-items-center">
+                    <span class="image">
+                        <img width="75px" height="40px" src="./assets/images/ic_collections_24px(1).svg" />
+                    </span>
+                    <span class="text">Pipe</span>
+                </div>
+                <div class="item w25 d-flex flex-column align-items-center">
+                    <span class="image">
+                        <img width="75px" height="40px" src="./assets/images/ic_collections_24px(1).svg" />
+                    </span>
+                    <span class="text">Connector</span>
+                </div>
+                <div class="item w25 d-flex flex-column align-items-center">
+                    <span class="image">
+                        <img width="75px" height="40px" src="./assets/images/ic_collections_24px(1).svg" />
+                    </span>
+                    <span class="text">Pump</span>
+                </div>
+                <div class="item w25 d-flex flex-column align-items-center">
+                    <span class="image">
+                        <img width="75px" height="40px" src="./assets/images/ic_collections_24px(1).svg" />
+                    </span>
+                    <span class="text">Boiler</span>
+                </div>
+            </div>
+        </li>
+    </ul>
+</div>

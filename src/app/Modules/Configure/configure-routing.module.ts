@@ -1,12 +1,11 @@
 import { NgModule } from "@angular/core";
 import { Routes, RouterModule } from "@angular/router";
-
-import { ConfigureComponent } from "./Components/configure/configure.component";
+import { ConfigureLayoutComponent } from "./Components/configure-layout/configure-layout.component";
 
 const routes: Routes = [
   {
       path:"",
-      component: ConfigureComponent
+      component: ConfigureLayoutComponent
   }
 ];
 
