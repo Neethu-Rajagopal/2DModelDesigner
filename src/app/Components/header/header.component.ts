@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { ConfigureService } from '@app/Services/configure.service';
 import { faBell, faQuestionCircle, faUser } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
@@ -15,9 +16,15 @@ export class HeaderComponent implements OnInit {
   navbarToggle: boolean = false;
   @Output() emitTabName = new EventEmitter();
 
-  constructor() { }
+  constructor(private configureService: ConfigureService) { }
 
   ngOnInit(): void {
+    this.switchTab('Configure');
+  }
+
+  switchTab(tab: string) {
+    this.selectedTab = tab;
+    this.configureService.configureTabSubject.next({ tabName: this.selectedTab });
   }
 
 }

@@ -1,2 +1,2 @@
-<app-configure></app-configure>
-<app-design></app-design>
+<app-configure *ngIf="tabName === 'Configure'"></app-configure>
+<app-design *ngIf="tabName === 'Design'"></app-design>

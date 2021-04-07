@@ -16,13 +16,13 @@
         </select>
       </div>
       <ul class="nav nav-tabs">
-        <li class="nav-item" (click)="selectedTab = 'Configure';emitTabName.emit(selectedTab);">
+        <li class="nav-item" (click)="switchTab('Configure')">
           <a class="nav-link" [ngClass]="{'active':selectedTab === 'Configure'}">Configure</a>
         </li>
-        <li class="nav-item" (click)="selectedTab = 'Design';emitTabName.emit(selectedTab);">
+        <li class="nav-item" (click)="switchTab('Design')">
           <a class="nav-link" [ngClass]="{'active':selectedTab === 'Design'}">Design</a>
         </li>
-        <li class="nav-item" (click)="selectedTab = 'Preview';emitTabName.emit(selectedTab);">
+        <li class="nav-item" (click)="switchTab('Preview')">
           <a class="nav-link" [ngClass]="{'active':selectedTab === 'Preview'}">Preview</a>
         </li>
       </ul>
