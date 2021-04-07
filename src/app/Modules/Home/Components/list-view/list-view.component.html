@@ -1,22 +1,23 @@
 <ul class="list-section">
-  <li *ngFor="let list of array; index as j;">
-      <img (click)="selectedIndex = j;" *ngIf="selectedIndex !== j" src="./assets/images/ic_add_circle_24px.svg" />
-      <img *ngIf="selectedIndex === j" src="./assets/images/ic_remove_circle_24px.svg" />
-      <div class="list-data">
-          <div class="d-flex">
-              <img src="./assets/images/Group-4158.svg" />
-              <div>
-                  <b> {{list.name}} </b>
-                  <div>
-                      <span style="margin-right: 58px;">Plot Order: {{list.order}}</span>
-                      <span>Children: {{list.children?.length}}</span>
-                  </div>
-              </div>
-          </div>
-          <div class="footer d-flex flex-column align-items-center">
-              <div class="arrow-img"> <img class="m-0" src="./assets/images/ic_arrow_upward_24px.svg" /> </div>
-              <span>{{list.date}}</span>
-          </div>
-      </div>
-  </li>
+    <li *ngFor="let list of array; index as j;">
+        <img class="cp" (click)="selectedIndex = j;" *ngIf="selectedIndex !== j"
+            src="./assets/images/icon_add_circle.svg" />
+        <img class="cp" *ngIf="selectedIndex === j" src="./assets/images/ic_remove_circle.svg" />
+        <div class="list-data">
+            <div class="d-flex">
+                <img src="./assets/images/list-icon.svg" />
+                <div>
+                    <b> {{list.name}} </b>
+                    <div>
+                        <span style="margin-right: 58px;">Plot Order: {{list.order}}</span>
+                        <span>Children: {{list.children?.length}}</span>
+                    </div>
+                </div>
+            </div>
+            <div class="footer d-flex flex-column align-items-center">
+                <div class="arrow-img"> <img class="m-0" src="./assets/images/ic-arrow-upward.svg" /> </div>
+                <span>{{list.date}}</span>
+            </div>
+        </div>
+    </li>
 </ul>
