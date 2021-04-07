@@ -1,0 +1,50 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+      <ng-container *ngIf="page === 'home'; else configureTabs;">
+          <a class="navbar-brand logo">
+              <img src="./assets/images/logo-small-copy.png" alt="logo" width="27" height="21">
+          </a>
+          <a class="navbar-brand title">Cerebra Digital Twin Designer</a>
+      </ng-container>
+      <ng-template #configureTabs>
+          <ul class="nav nav-tabs">
+              <li class="nav-item" (click)="selectedTab = 'Configure';emitTabName.emit(selectedTab);">
+                  <a class="nav-link" [ngClass]="{'active':selectedTab === 'Configure'}">Configure</a>
+              </li>
+              <li class="nav-item" (click)="selectedTab = 'Design';emitTabName.emit(selectedTab);">
+                  <a class="nav-link" [ngClass]="{'active':selectedTab === 'Design'}">Design</a>
+              </li>
+              <li class="nav-item" (click)="selectedTab = 'Preview';emitTabName.emit(selectedTab);">
+                  <a class="nav-link" [ngClass]="{'active':selectedTab === 'Preview'}">Preview</a>
+              </li>
+          </ul>
+      </ng-template>
+      <button (click)="navbarToggle = !navbarToggle" class="navbar-toggler" type="button" data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+          aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+      </button>
+      <span *ngIf="page === 'configure'" style="color: #D6D6D6;font-size: 12px;margin-right: 12px;">
+          Autosaved 3 seconds ago</span>
+      <div *ngIf="page === 'home'" class="collapse navbar-collapse" id="navbarSupportedContent"
+          [ngClass]="{'show':navbarToggle}">
+          <ul class="navbar-nav align-items-center me-auto mb-2 mb-lg-0">
+              <li class="nav-item" *ngIf="page === 'home'">
+                  <a class="nav-link">
+                      <fa-icon [icon]="faBell"></fa-icon>
+                  </a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link">
+                      <fa-icon [icon]="faQuestionCircle"></fa-icon>
+                  </a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link">
+                      <fa-icon [icon]="faUser"></fa-icon>
+                  </a>
+              </li>
+          </ul>
+      </div>
+  </div>
+</nav>

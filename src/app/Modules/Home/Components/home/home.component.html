@@ -1,0 +1,59 @@
+<app-home-side-bar></app-home-side-bar>
+<div class="head">
+  <div class="heading">Start Designing</div>
+  <div class="search">
+      <input type="text" placeholder="Search digital twins" />
+      <span class="icon-search"></span>
+  </div>
+</div>
+<section>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid p-0">
+          <div>
+              <span class="p-0 heading">Your Twins</span>
+              <button routerLink="/configure">Create New</button>
+          </div>
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                  <span>Mode</span>
+                  <b>View</b>
+                  <span class="toggle-btn">
+                      <label class="switch">
+                          <input type="checkbox" checked>
+                          <span class="slider round"></span>
+                      </label>
+                  </span>
+                  <span>Plot Order</span>
+              </li>
+              <li class="nav-item">
+                  <span>Sort by</span>
+                  <select>
+                      <option>Created date</option>
+                  </select>
+              </li>
+              <li class="nav-item">
+                  <span>View</span>
+                  <ng-container *ngIf="view === 'Card'; else list;">
+                      <img class="mr-3 cp" (click)="view = 'Card'" [ngClass]="{'active' : view === 'Card'}"
+                          src="./assets/images/ic_apps_24px.svg" />
+                      <img class="cp" (click)="view = 'List'" src="./assets/images/ic_menu_24px.svg" />
+                  </ng-container>
+                  <ng-template #list>
+                      <img class="mr-3 cp" (click)="view = 'Card'" src="./assets/images/ic_apps_24px(1).svg" />
+                      <img class="cp" (click)="view = 'List'" [ngClass]="{'active' : view === 'List'}"
+                          src="./assets/images/ic_menu_24px(1).svg" />
+                  </ng-template>
+              </li>
+          </ul>
+      </div>
+  </nav>
+  <main>
+      <ng-container *ngFor="let item of array; index as i;">
+          <div class="heading pl-0" style="font-size: 14px;" (click)="showList(i)">
+              <img style="margin-right: 11px;" src="./assets/images/ic_arrow_drop_down_24px.svg" /> {{item}}
+          </div>
+          <app-card-view *ngIf="view === 'Card' && i === selectedIndex"></app-card-view>
+          <app-list-view *ngIf="view === 'List' && i === selectedIndex"></app-list-view>
+      </ng-container>
+  </main>
+</section>

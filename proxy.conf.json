@@ -1,0 +1,33 @@
+{
+  "/cerebra/*": {
+    "target": "http://localhost:3000/"
+  },
+  "/designer/*": {
+    "target": "http://localhost:3000/"
+  },
+  "/webServices/*": {
+    "target": "http://localhost:3000/"
+  },
+  "/api/*": {
+    "target": "http://localhost:3000/"
+  },
+  "/logout": {
+    "target": "http://localhost:3000/"
+  },
+  "/images/*": {
+    "target": "http://localhost:3000/"
+  },
+  "/login/*": {
+    "target": "http://localhost:3000/"
+  },
+  "/socket.io/*": {
+    "target": "http://localhost:3000/",
+    "ws"    :  true
+  },
+  "/hmi/*": {
+    "target": "http://localhost:3000/"
+  },
+  "/file/*": {
+    "target": "http://localhost:3000/"
+  }
+}

@@ -1,0 +1,32 @@
+#sidebar-wrapper {
+  width: 249px;
+  min-height: calc(100vh - 50px);
+  background: #fafafa;
+  font-size: 16px;
+  float: left;
+  .heading {
+      border-bottom: 1px solid #d6d6d6;
+  }
+  .sidebar-nav {
+      padding: 18px 0;
+      li {
+          list-style: none;
+          padding: 7px 26px 9px;
+          color: #000000cc;
+          font-weight: 400;
+          &.active {
+              color: #ed6900;
+              background: #ed690015;
+          }
+          a {
+              display: flex;
+              align-items: center;
+          }
+          img {
+              margin-right: 18px;
+              width: 20px;
+              height: 20px;
+          }
+      }
+  }
+}

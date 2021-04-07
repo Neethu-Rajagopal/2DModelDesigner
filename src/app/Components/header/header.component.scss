@@ -1,0 +1,53 @@
+.navbar {
+    background: #2f2f2f !important;
+    height: 50px;
+    position: relative;
+    align-items: center;
+    .navbar-brand {
+        &.logo {
+            position: absolute;
+            left: 14px;
+        }
+    }
+    .centered-item {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        .title {
+            font-size: 16px;
+            color: #d6d6d6;
+            font-weight: 600;
+        }
+        select {
+            background: #fff;
+            font-size: 14px;
+            color: #1f1f1f;
+            width: 247px;
+            border: 1px solid #c0c0c0;
+            border-radius: 5px;
+            padding: 7px;
+        }
+    }
+    button.navbar-toggler {
+        position: absolute;
+        right: 12px;
+        background: #d6d6d6;
+        font-size: 10px;
+    }
+    .navbar-nav {
+        position: absolute;
+        right: 18px;
+        @media (max-width: 768px) {
+            background: rgba(#2f2f2f, 0.8);
+            right: 0;
+            top: 100%;
+            width: 100%;
+        }
+        fa-icon {
+            cursor: pointer;
+            color: #fff;
+            margin: 0 6px;
+            font-size: 16px;
+        }
+    }
+}

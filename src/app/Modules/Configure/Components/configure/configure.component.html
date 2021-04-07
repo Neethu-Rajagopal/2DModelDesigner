@@ -1,0 +1,41 @@
+<form>
+  <div class="form-group">
+      <label>Name of Asset</label>
+      <select class="form-control">
+          <option>FDB - 026</option>
+      </select>
+  </div>
+  <div class="form-group">
+      <label>Give a name for the Twin</label>
+      <input type="text" class="form-control" value="Give a name for the Twin" placeholder="Give a name for the Twin">
+  </div>
+  <div class="form-group">
+      <label>Parent Twin</label>
+      <select class="form-control">
+          <option>Overview</option>
+      </select>
+  </div>
+  <div class="form-group">
+      <label>Give a Description</label>
+      <textarea class="form-control" rows="3"></textarea>
+  </div>
+  <div class="form-group align-items-start">
+      <label>Use Cerebra Theme</label>
+      <div class="flex-column">
+          <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" checked>
+              <label class="form-check-label">Yes</label>
+          </div>
+          <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio">
+              <label class="form-check-label">No</label>
+          </div>
+          <small>
+              If you use Cerebra theme, the designer will automatically replace the colors you choose with Cerebra
+              colors.<br />
+              You can see how Cerebra theme will look like once you Preview the design.</small>
+      </div>
+  </div>
+  <button type="submit" class="btn btn-primary mb-2">Save</button>
+  <button routerLink="/home" class="btn btn-secondary mb-2">Cancel</button>
+</form>

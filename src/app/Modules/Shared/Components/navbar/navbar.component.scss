@@ -1,0 +1,65 @@
+.navbar {
+  background: #2f2f2f !important;
+  height: 50px;
+  position: relative;
+  padding-bottom: 2px;
+  .navbar-brand {
+      &.logo {
+          position: absolute;
+          left: 14px;
+      }
+      &.title {
+          position: absolute;
+          left: 50%;
+          transform: translateX(-50%);
+          font-size: 16px;
+          color: #d6d6d6;
+          font-weight: 600;
+      }
+  }
+  button.navbar-toggler {
+      position: absolute;
+      right: 12px;
+      background: #d6d6d6;
+      font-size: 10px;
+  }
+  .navbar-nav {
+      position: absolute;
+      right: 18px;
+      @media (max-width: 768px) {
+          background: rgba(#2f2f2f, 0.8);
+          right: 0;
+          top: 100%;
+          width: 100%;
+      }
+      fa-icon {
+          cursor: pointer;
+          color: #fff;
+          margin: 0 6px;
+          font-size: 16px;
+      }
+  }
+  .nav-tabs {
+      border: none;
+      .nav-item {
+          .nav-link {
+              color: #d6d6d6;
+              font-size: 16px;
+              padding: 0;
+              margin-right: 19px;
+              &:hover,
+              &:focus {
+                  border: none;
+                  outline: none;
+              }
+              &.active {
+                  font-weight: 600;
+                  background: transparent;
+                  border: none;
+                  border-bottom: 4px solid #ff8321;
+                  padding-bottom: 5px;
+              }
+          }
+      }
+  }
+}
