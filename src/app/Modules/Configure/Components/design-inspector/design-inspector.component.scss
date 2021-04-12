@@ -2,6 +2,9 @@ ul.sidebar-nav {
     li {
         border-bottom: 1px solid #ebebeb;
         padding: 9.5px 0;
+        &:last-child {
+            border: none;
+        }
         .text {
             color: #808080;
             font-size: 12px;
@@ -38,6 +41,18 @@ ul.sidebar-nav {
                     background: #808080;
                 }
             }
+        }
+        select {
+            border: 1px solid #d6d6d6;
+            background: #fff;
+            border-radius: 2px;
+            color: #2f2f2f;
+            font-size: 10px;
+            padding: 4px 2px;
+        }
+        textarea {
+            border: 1px solid #d6d6d6;
+            border-radius: 2px;
         }
     }
 }

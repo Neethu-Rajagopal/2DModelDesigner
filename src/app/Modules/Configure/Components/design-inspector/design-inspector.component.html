@@ -25,13 +25,12 @@
                     <img width="13px" height="15px" src="./assets/images/icon_content_paste.svg" />
                     <img width="14px" height="16px" src="./assets/images/icon-add-rect.svg" />
 
-                    <img class="float-right" width="12px" height="15px"
-                        src="./assets/images/icon_delete.svg" />
+                    <img class="float-right" width="12px" height="15px" src="./assets/images/icon_delete.svg" />
                 </div>
             </li>
             <li>
                 <div class="text">Transform</div>
-                <input type="text" />
+                <!-- <input type="text" /> -->
             </li>
             <li>
                 <div class="text">Opacity</div>
@@ -64,11 +63,21 @@
             </li>
             <li>
                 <div class="text">Group</div>
-                <input type="text" />
+                <select style="width: 229px;">
+                    <option>None</option>
+                </select>
             </li>
             <li>
                 <div class="text">Advanced</div>
-                <input type="text" />
+                <div class="text d-inline-block" style="margin-right: 11px;margin-bottom: 18px; margin-top: 12px;">Mode
+                </div>
+                <select style="width: 181px;">
+                    <option>Live view</option>
+                </select>
+                <div class="text d-flex align-items-center justify-content-between" style="font-size:12px;">SVG Path
+                    <img  src="../../../../../assets/images/ic_fullscreen.svg" />
+                </div>
+                <textarea style="width: 229px;" value="Set SVG path here"></textarea>
             </li>
         </ul>
     </ng-container>
