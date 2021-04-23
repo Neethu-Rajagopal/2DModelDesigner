@@ -19,7 +19,7 @@ export class HeaderComponent implements OnInit {
   constructor(private configureService: ConfigureService) { }
 
   ngOnInit(): void {
-    this.switchTab('Configure');
+    this.switchTab('Design');
   }
 
   switchTab(tab: string) {
